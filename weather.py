@@ -48,7 +48,7 @@ CONDITION_CLASSES = {
     'partlycloudy': ['partly-cloudy'],
     'cloudy': ['cloudy', 'overcast'],
     'pouring': ['overcast-and-rain'],
-    'rainy': ['cloudy-and-rain', 'overcast-and-light-rain', 'cloudy-and-light-rain', 'partly-cloudy-and-light-rain'],
+    'rainy': ['cloudy-and-rain', 'overcast-and-light-rain', 'cloudy-and-light-rain', 'partly-cloudy-and-light-rain', 'light-rain'],
     'lightning-rainy': ['overcast-thunderstorms-with-rain'],
     'snowy-rainy': ['overcast-and-wet-snow'],
     'snowy': ['cloudy-and-snow', 'overcast-and-light-snow', 'cloudy-and-light-snow', 'overcast-and-snow', 'partly-cloudy-and-snow', 'partly-cloudy-and-light-snow'],
@@ -65,6 +65,7 @@ DESCRIPTION_DIC = {
     'overcast-thunderstorms-with-rain': 'Сильный дождь, гроза',
     'cloudy-and-light-rain': 'Небольшой дождь',
     'overcast-and-light-rain': 'Небольшой дождь',
+    'light-rain': 'Небольшой дождь',
     'cloudy-and-rain': 'Дождь',
     'overcast-and-wet-snow': 'Дождь со снегом',
     'partly-cloudy-and-light-snow': 'Небольшой снег',
@@ -221,7 +222,7 @@ class YandexWeather (WeatherEntity):
             data[ATTR_PRESSURE_MM] = self._weather_data.current.get('pressure_mm')
             data[ATTR_WIND_SPEED_MS] = self._weather_data.current.get('wind_speed')
             data[ATTR_WEATHER_ICON] = self._weather_data.current.get('icon')
-            data[ATTR_OBS_TIME] = dt_util.as_local(dt_util.utc_from_timestamp(self._weather_data.current.get('obs_time'))).strftime(TIME_STR_FORMAT)
+            data[ATTR_OBS_TIME] = dt_util.as_local(dt_util.utc_from_timestamp(self._weather_data.current.get('obs_time')))
             data[ATTR_WEATHER_CON] = DESCRIPTION_DIC[self._weather_data.current.get('condition')]
             return data
         return None 
