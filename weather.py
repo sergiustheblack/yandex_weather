@@ -242,7 +242,7 @@ class YaWeather(object):
         
 
     async def get_weather(self):
-        base_url="https://api.weather.yandex.ru/v1/informers?lat=%s&lon=%s" % (self._lat, self._lon)
+        base_url="https://api.weather.yandex.ru/v2/informers?lat=%s&lon=%s" % (self._lat, self._lon)
         headers = {'X-Yandex-API-Key':self._api}       
 
         try:
