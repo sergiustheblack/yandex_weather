@@ -51,7 +51,7 @@ CONDITION_CLASSES = {
     'rainy': ['cloudy-and-rain', 'overcast-and-light-rain', 'cloudy-and-light-rain', 'partly-cloudy-and-light-rain', 'light-rain'],
     'lightning-rainy': ['overcast-thunderstorms-with-rain'],
     'snowy-rainy': ['overcast-and-wet-snow'],
-    'snowy': ['cloudy-and-snow', 'overcast-and-light-snow', 'cloudy-and-light-snow', 'overcast-and-snow', 'partly-cloudy-and-snow', 'partly-cloudy-and-light-snow'],
+    'snowy': ['cloudy-and-snow', 'overcast-and-light-snow', 'cloudy-and-light-snow', 'overcast-and-snow', 'partly-cloudy-and-snow', 'partly-cloudy-and-light-snow', 'snow'],
 }
 
 DESCRIPTION_DIC = {
@@ -74,6 +74,7 @@ DESCRIPTION_DIC = {
     'cloudy-and-light-snow': 'Небольшой снег',
     'overcast-and-light-snow': 'Небольшой снег',
     'cloudy-and-snow': 'Снег',
+    'snow': 'Снег',
 }
 
 MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=30)
