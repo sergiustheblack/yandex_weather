@@ -1,9 +1,9 @@
 {
   "domain": "yandex_weather",
-  "name": "Yandex weather",
-  "documentation": "https://github.com/sergiustheblack/yandex_weather"
+  "version": "0.1.0",
+  "name": "yandex_weather",
+  "documentation": "https://github.com/sergiustheblack/yandex_weather",
   "dependencies": [],
   "codeowners": ["sergiustheblack", "bastshoes"],
-  "requirements": [],
-  "version": "0.1.0"
+  "requirements": []
 }
